@@ -1,0 +1,31 @@
+@use "../utilities/mixins" as *;
+
+.temperature__converter {
+  background-color: greenyellow;
+  height: 100vh;
+  @include flex(center, center);
+
+  //   border bart
+  &--border {
+    h1 {
+      @include flex(center, center);
+      font-size: 2em;
+    }
+    background-color: lightgreen;
+    color: green;
+    box-shadow: 0 0 3px black;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    border-radius: 1em;
+    border: none;
+  }
+  &--inputs {
+    @include flex(space-between, center, row, wrap);
+    padding: 20px 0;
+
+    input {
+      padding: 5px 0;
+    }
+  }
+
+}
